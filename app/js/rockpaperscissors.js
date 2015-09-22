@@ -25,47 +25,58 @@ function getPlayerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return move || getInput();
-/* Your Expression */
+     if (move === 'rock') {
+        return (playerMove = ’rock’);
+    } else if (move === 'paper') {
+        return (playerMove = ’paper’);
+    } else if (move === 'scissors') {
+        return (playerMove = ‘scissors’);
+    } else {
+        return getInput();
+	}
 }
 
 function getComputerMove(move) {
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return move || randomPlay();
-/* Your Expression */
+    if (move === 'rock') {
+        return (computerMove = ’rock’);
+    } else if (move === 'paper') {
+        return (computerMove = ’paper’);
+    } else if (move === 'scissors') {
+        return (computerMove = ‘scissors’);
+    } else {
+        return randomPlay();
+	}
 }
 
 function getWinner(playerMove,computerMove) {
-	// either have var playerMove and var computerMove and take these out
-	// of parentheses (parameters) or keep in paren and take out var.
-	while (playerMove === “rock”) {
-	if (computerMove === “rock”) {
-		return “tie”;
-	// Not sure this makes sense—maybe return “tie” instead/ winner not def
-	} else if (computerMove === “paper”) {
-		return “computer”;
-	} else if (computerMove === “scissors”) {
-		return “player”;
+	while (playerMove === 'rock') {
+	if (computerMove === 'rock') {
+		return 'tie';
+	} else if (computerMove === 'paper') {
+		return 'computer';
+	} else if (computerMove === 'scissors') {
+		return 'player';
 		}
 	}
-	while (playerMove === “paper”) {
-	if (computerMove === “rock”) {
-		return “player”;
-	} else if (computerMove === “paper”) {
-		return “tie”;
-	} else if (computerMove === “scissors”) {
-		return “computer”;
+	while (playerMove === 'paper') {
+	if (computerMove === 'rock') {
+		return 'player';
+	} else if (computerMove === 'paper') {
+		return 'tie';
+	} else if (computerMove === 'scissors') {
+		return 'computer';
 		}
 	}
-	while (playerMove === “scissors”) {
-	if (computerMove === “rock”) {
-		return “computer”;
-	} else if (computerMove === “paper”) {
-		return “player”;
-	} else if (computerMove === “scissors”) {
-		return “tie”;
+	while (playerMove === 'scissors') {
+	if (computerMove === 'rock') {
+		return 'computer';
+	} else if (computerMove === 'paper') {
+		return 'player';
+	} else if (computerMove === 'scissors') {
+		return 'tie';
 		}
 	}
 
