@@ -75,7 +75,7 @@ function playToFive() {
   console.log('Let\'s play Rock Paper Scissors');
   var playerWins = 0;
   var computerWins = 0;
-  while (playerWins < 5 && computerWins < 5) {
+  for ((playerWins < 5) && (computerWins < 5)) {
     if (winnerIsPlayer()){
 	   playerWins += 1;
     }
@@ -129,7 +129,7 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
-    while (playerWins < 5 && computerWins < 5) {
+    for ((playerWins < 5) && (computerWins < 5)) {
     //not sure while is allowed within a function.
     if (winnerIsPlayer()){
 	playerWins += 1;
