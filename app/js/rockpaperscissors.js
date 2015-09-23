@@ -52,33 +52,36 @@ function getComputerMove(move) {
 }
 
 function getWinner(playerMove,computerMove) {
+    var winner;
 	while (playerMove === 'rock') {
 	if (computerMove === 'rock') {
-		return 'tie';
+		winner = 'tie';
 	} else if (computerMove === 'paper') {
-		return 'computer';
+		winner = 'computer';
 	} else if (computerMove === 'scissors') {
-		return 'player';
+		winner = 'player';
 		}
 	}
 	while (playerMove === 'paper') {
 	if (computerMove === 'rock') {
-		return 'player';
+		winner = 'player';
 	} else if (computerMove === 'paper') {
-		return 'tie';
+		winner = 'tie';
 	} else if (computerMove === 'scissors') {
-		return 'computer';
+		winner = 'computer';
 		}
 	}
 	while (playerMove === 'scissors') {
 	if (computerMove === 'rock') {
-		return 'computer';
+		winner = 'computer';
 	} else if (computerMove === 'paper') {
-		return 'player';
+		winner = 'player';
 	} else if (computerMove === 'scissors') {
-		return 'tie';
+		winner = 'tie';
 		}
 	}
+	
+	return winner;
 
 }
 
