@@ -51,7 +51,7 @@ function getComputerMove(move) {
 	}
 }
 
-function getWinner(playerMove,computerMove) {
+function getWinner(playerMove, computerMove) {
     var winner;
 	while (playerMove === 'rock') {
 	if (computerMove === 'rock') {
@@ -61,6 +61,7 @@ function getWinner(playerMove,computerMove) {
 	} else if (computerMove === 'scissors') {
 		winner = 'player';
 		}
+		return winner; 
 	}
 	while (playerMove === 'paper') {
 	if (computerMove === 'rock') {
@@ -70,6 +71,7 @@ function getWinner(playerMove,computerMove) {
 	} else if (computerMove === 'scissors') {
 		winner = 'computer';
 		}
+		return winner;
 	}
 	while (playerMove === 'scissors') {
 	if (computerMove === 'rock') {
@@ -79,10 +81,9 @@ function getWinner(playerMove,computerMove) {
 	} else if (computerMove === 'scissors') {
 		winner = 'tie';
 		}
+		return winner;
 	}
 	
-	return winner;
-
 }
 
 /* Below are 3 different versions of playToFive, none of which I’ve been able to get to work so far. */
