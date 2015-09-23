@@ -86,7 +86,35 @@ function getWinner(playerMove, computerMove) {
 	
 }
 
-/* Below are 3 different versions of playToFive, none of which I’ve been able to get to work so far. */
+function playToFive() {
+  console.log('Let\'s play Rock Paper Scissors');
+  var playerWins = 0;
+  var computerWins = 0;
+  while ((playerWins < 5) && (computerWins < 5)) {
+    var playerMove = getPlayerMove(getInput());
+    var computerMove = getComputerMove(randomPlay());
+    var winner = getWinner(playerMove, computerMove);
+    
+    if (winner === 'player') {
+      console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+      playerWins += 1;
+    }
+    
+    else if (winner === 'computer') {
+    console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+       computerWins += 1; 
+    } else {
+        
+    return console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+    }
+    console.log('The score is currently ' + playerWins + ' to ' + computerWins);
+  return [playerWins, computerWins];
+}
+}
+
+playToFive ();
+
+/* Below are 3 additional versions of playToFive, none of which I’ve been able to get to work so far. 
 /* Also, I assume playToFive is meant to build on getWinner, which is meant to build on getPlayerMove and getComputerMove, but I’m having trouble connecting them all without assigning the return values to variables… */
 
  
@@ -201,6 +229,7 @@ function winnerIsComputer() {
 	return ‘computer’;
 	// if getWinner = “computer” (not sure of syntax)
 } 
+   */
 */
 
 
